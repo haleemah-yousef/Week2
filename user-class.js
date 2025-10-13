@@ -43,3 +43,5 @@ admin1.login();
 admin1.viewUser(user1); 
 admin1.logout();
 */
+
+export { User, Admin };
