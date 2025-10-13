@@ -27,6 +27,20 @@ class Admin extends User {
         this.role = role;
     }
 
+    login() {
+        console.log(`the admin ${this.username} has logged in.`);
+    }
+
+    logout() {
+        console.log(`the admin ${this.username} has logged out.`);
+    }
+
+    updateProfile(newEmail, newPassword) {
+        this.email = newEmail;
+        this.password = newPassword;
+        console.log(`the admin ${this.username} has updated their profile.`);
+    }   
+
     viewUser(user) {
         console.log(`Admin ${this.username} is viewing user ${user.username}.`);
     }
@@ -44,4 +58,4 @@ admin1.viewUser(user1);
 admin1.logout();
 */
 
-export { User, Admin };
+module.exports = { User, Admin };
