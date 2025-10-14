@@ -1,49 +1,47 @@
 class User {
-    constructor(username, email, password) {
-        this.username = username;
-        this.email = email;
-        this.password = password;
-    }
+  constructor(username, email, password) {
+    this.username = username;
+    this.email = email;
+    this.password = password;
+  }
 
-    login() {
-        console.log(`the user ${this.username} has logged in.`);
-    }
+  login() {
+    console.log(`the user ${this.username} has logged in.`);
+  }
 
-    logout() {
-        console.log(`the user ${this.username} has logged out.`);
-    }
-    updateProfile(newEmail, newPassword) {
-        this.email = newEmail;
-        this.password = newPassword;
-        console.log(`the user ${this.username} has updated their profile.`);
-    }
-
+  logout() {
+    console.log(`the user ${this.username} has logged out.`);
+  }
+  updateProfile(newEmail, newPassword) {
+    this.email = newEmail;
+    this.password = newPassword;
+    console.log(`the user ${this.username} has updated their profile.`);
+  }
 }
 
-
 class Admin extends User {
-    constructor(username, email, password, role) {
-        super(username, email, password);
-        this.role = role;
-    }
+  constructor(username, email, password, role) {
+    super(username, email, password);
+    this.role = role;
+  }
 
-    login() {
-        console.log(`the admin ${this.username} has logged in.`);
-    }
+  login() {
+    console.log(`the admin ${this.username} has logged in.`);
+  }
 
-    logout() {
-        console.log(`the admin ${this.username} has logged out.`);
-    }
+  logout() {
+    console.log(`the admin ${this.username} has logged out.`);
+  }
 
-    updateProfile(newEmail, newPassword) {
-        this.email = newEmail;
-        this.password = newPassword;
-        console.log(`the admin ${this.username} has updated their profile.`);
-    }   
+  updateProfile(newEmail, newPassword) {
+    this.email = newEmail;
+    this.password = newPassword;
+    console.log(`the admin ${this.username} has updated their profile.`);
+  }
 
-    viewUser(user) {
-        console.log(`Admin ${this.username} is viewing user ${user.username}.`);
-    }
+  viewUser(user) {
+    console.log(`Admin ${this.username} is viewing user ${user.username}.`);
+  }
 }
 
 /*

@@ -1,4 +1,3 @@
-
 // promise example - user login
 
 function loginUser(username) {
@@ -6,7 +5,7 @@ function loginUser(username) {
 
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      const success =true; 
+      const success = true;
       if (success) {
         resolve({ id: 1, name: username, status: "Logged in" });
       } else {
@@ -17,12 +16,12 @@ function loginUser(username) {
 }
 
 loginUser("Haleemah")
-  .then(user => console.log("Login successful:", user))
-  .catch(error => console.error("Login failed:", error))
+  .then((user) => console.log("Login successful:", user))
+  .catch((error) => console.error("Login failed:", error))
   .finally(() => console.log("Login attempt finished.\n"));
 
 // async/await example - user login
-  async function handleLogin() {
+async function handleLogin() {
   console.log("Logging in with async/await...");
 
   try {
