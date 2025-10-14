@@ -1,59 +1,37 @@
+// Define a base class named 'User'
 class User {
+  // Constructor initializes user properties
   constructor(username, email, password) {
     this.username = username;
     this.email = email;
     this.password = password;
   }
 
+  // Method to simulate user login
   login() {
-    console.log(`the user ${this.username} has logged in.`);
+    console.log(`The user ${this.username} has logged in.`);
   }
 
+  // Method to simulate user logout
   logout() {
-    console.log(`the user ${this.username} has logged out.`);
+    console.log(`The user ${this.username} has logged out.`);
   }
+
+  // Method to update the user's email and password
   updateProfile(newEmail, newPassword) {
     this.email = newEmail;
     this.password = newPassword;
-    console.log(`the user ${this.username} has updated their profile.`);
+    console.log(`The user ${this.username} has updated their profile.`);
   }
 }
 
-class Admin extends User {
-  constructor(username, email, password, role) {
-    super(username, email, password);
-    this.role = role;
-  }
 
-  login() {
-    console.log(`the admin ${this.username} has logged in.`);
-  }
 
-  logout() {
-    console.log(`the admin ${this.username} has logged out.`);
-  }
 
-  updateProfile(newEmail, newPassword) {
-    this.email = newEmail;
-    this.password = newPassword;
-    console.log(`the admin ${this.username} has updated their profile.`);
-  }
+// Example usage:
+// const user1 = new User("johnDoe", "john@example.com", "12345");
+// user1.login();
+// const admin1 = new Admin("adminJane", "admin@example.com", "admin123", "superadmin");
+// admin1.viewUser(user1);
 
-  viewUser(user) {
-    console.log(`Admin ${this.username} is viewing user ${user.username}.`);
-  }
-}
-
-/*
-const user1 = new User("Haleemah", "haleemah@gmail.com", "password123");
-user1.login();
-user1.updateProfile("haleemah@hotmail.com", "newpassword456");
-user1.logout();
-
-const admin1 = new Admin("Alma", "alma@gmail.com", "adminpassword123", "superadmin");
-admin1.login();
-admin1.viewUser(user1); 
-admin1.logout();
-*/
-
-module.exports = { User, Admin };
+module.exports = { User };
