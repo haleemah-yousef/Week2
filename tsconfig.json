@@ -6,7 +6,7 @@
 
     /* === Language & Module System === */
     "target": "ES6",          // modern JS features
-    "module": "ESNext",          // matches "type": "module"
+    "module": "commonjs",          // matches "type": "module"
     "moduleResolution": "node",  // resolves imports like Node
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
